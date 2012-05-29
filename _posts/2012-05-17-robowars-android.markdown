@@ -23,7 +23,7 @@ bitter end.
 
 The tentative name: **RoboWars**.
 
-I'm not too crazy about it, though, so it will probably change in the future.
+I'm not too crazy about the name, though, so it will probably change in the future.
 
 Our plan at the moment is the following:
 
