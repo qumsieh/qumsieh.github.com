@@ -1,6 +1,6 @@
 ---
 layout: default
-published: false
+published: true
 ---
 # Does Using a Library Waste Precious Memory?
 
