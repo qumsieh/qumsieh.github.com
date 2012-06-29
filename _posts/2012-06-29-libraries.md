@@ -1,6 +1,7 @@
 ---
 layout: default
 published: true
+title: To Library or Not To Library
 ---
 # Does Using a Library Waste Precious Memory?
 
