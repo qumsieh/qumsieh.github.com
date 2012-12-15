@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 title: Evolutionary Image Replication Using Perl
 layout: post
 category : blog
