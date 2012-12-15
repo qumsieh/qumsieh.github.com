@@ -67,4 +67,16 @@ I chose to iterate for a predefined number of generations. Another way would hav
 
 ## Results
 
-I chose a small image
+I chose a small image to keep the runtime small:
+
+![Control Image](http://imgur.com/a/AYCXF#0)
+
+For the GA parameters, I used the following:
+* Population size = 100
+* Crossover rate = 0.91
+* Mutation rate = 0.01
+* Number of generations = 5000
+
+After 1250 generations, the best solution looked like this:
+
+![1250 Generations](http://imgur.com/a/AYCXF#1)
