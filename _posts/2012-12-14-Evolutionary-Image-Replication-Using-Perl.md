@@ -1,6 +1,9 @@
 ---
-layout: default
 published: false
+title: Evolutionary Image Replication Using Perl
+layout: post
+category : blog
+tags : [perl, programming, Genetic Algorithms]
 ---
 
 # Evolutionary Image Replication using Perl
