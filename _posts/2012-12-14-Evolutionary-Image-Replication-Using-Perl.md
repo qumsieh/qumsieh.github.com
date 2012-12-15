@@ -64,4 +64,4 @@ I chose to iterate for a predefined number of generations. Another way would hav
 
 ## Results
 
-I chose a small image 
+I chose a small image
