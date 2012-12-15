@@ -1,5 +1,5 @@
 ---
-published: true
+published: false
 title: Evolutionary Image Replication Using Perl
 layout: post
 category : blog
@@ -67,16 +67,24 @@ I chose to iterate for a predefined number of generations. Another way would hav
 
 ## Results
 
-I chose a small image to keep the runtime small:
-
-![Control Image](http://imgur.com/a/AYCXF#0)
-
 For the GA parameters, I used the following:
 * Population size = 100
 * Crossover rate = 0.91
 * Mutation rate = 0.01
 * Number of generations = 5000
 
-After 1250 generations, the best solution looked like this:
+To keep runtime short, I used a small image. The program took around 12 hours to go through the 5000 generations. The album below shows the reference image, along with images at generations 0, 1250, 2500, 3750 and 5000.
 
-![1250 Generations](http://imgur.com/a/AYCXF#1)
+<iframe class="imgur-album" width="100%" height="550" frameborder="0" src="http://imgur.com/a/AYCXF/embed"></iframe>
+
+As you can see, since the algorithm started from completely random triangles, the best solution of generation 0 has absolutely no resemblance to the final image. By the 1250th generation, though, the main color regions are well-defined. The change from there to the 5000th generation is not as obvious but little details are getting better defined.
+
+## Code
+
+Coming soon to github.
+
+## Conclusion
+
+It was surprisingly easy to write the program, and it performed relatively well. Just like evolution in real life, GAs are really slow. 5000 generations was enough to get a general outline of the final image, but to get a more accurate result, we need to run it for a much longer time. I'm currently running the same algorithm for 25000 generations to see what happens.
+
+Also, the GA parameters that I chose were pretty much random. More thought (and trial & error!) should go into choosing them.
