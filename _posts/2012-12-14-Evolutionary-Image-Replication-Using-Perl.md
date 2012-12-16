@@ -73,9 +73,11 @@ For the GA parameters, I used the following:
 * Mutation rate = 0.01
 * Number of generations = 5000
 
-To keep runtime short, I used a small image. The program took around 12 hours to go through the 5000 generations. The album below shows the reference image, along with images at generations 0, 1250, 2500, 3750 and 5000.
+To keep runtime short, I used a small image. The program took around 12 hours to go through the 5000 generations. The album below shows the reference image, along with images at generations 0, 1250, 2500, 3750 and 5000:
 
+<div>
 <iframe class="imgur-album" width="100%" height="300" frameborder="0" src="http://imgur.com/a/AYCXF/embed" />
+</div>
 
 As you can see, since the algorithm started from completely random triangles, the best solution of generation 0 has absolutely no resemblance to the final image. By the 1250th generation, though, the main color regions are well-defined. The change from there to the 5000th generation is not as obvious but little details are getting better defined.
 
