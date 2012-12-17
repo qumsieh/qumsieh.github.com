@@ -83,7 +83,7 @@ By the 1250th generation, though, the main color regions are well-defined. The c
 
 ## Code
 
-Coming soon to github.
+Get it [here on GitHub](https://github.com/qumsieh/pl-GeneticImageMatch/blob/master/gaImgMatch.pl)
 
 ## Conclusion
 
