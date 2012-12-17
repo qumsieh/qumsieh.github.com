@@ -85,6 +85,9 @@ By the 1250th generation, though, the main color regions are well-defined. The c
 
 Get it [here on GitHub](https://github.com/qumsieh/pl-GeneticImageMatch/blob/master/gaImgMatch.pl)
 
+*Obligatory note*: This is very rough code that I wrote in under an hour, then cleaned up enough to not feel too ashamed about posting it.
+I'm sure there are better ways to do things. Feel free to suggest enhacements.
+
 ## Conclusion
 
 It was surprisingly easy to write the program, and it performed relatively well. Just like evolution in real life, GAs are really slow. 5000 generations was enough to get a general outline of the final image, but to get a more accurate result, we need to run it for a much longer time. I'm currently running the same algorithm for 25000 generations to see what happens.
