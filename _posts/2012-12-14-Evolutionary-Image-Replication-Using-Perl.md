@@ -48,7 +48,7 @@ In order to rank each solution, I needed to plot it onto a canvas. For that, I u
     for x (0 to IMG_WIDTH - 1) {
         for y (0 to IMG_HEIGHT - 1) {
             ref_color = color of pixel(x, y) in reference img
-            sol_color = color of pixel(x, y)
+            sol_color = color of pixel(x, y) in solution img
             
             d_red   = ref_color_red_component   - sol_color_red_component
             d_green = ref_color_green_component - sol_color_green_component
@@ -59,9 +59,9 @@ In order to rank each solution, I needed to plot it onto a canvas. For that, I u
     }
     rank = -diff
 
-Note that the rank is the negative of the difference between the two images. The reason is that AI::Genetic tries to maximize the rank of the fittest solution, so I needed a measure that increases for more fit solutions. Alternatively, I could have set the rank to 1/diff and achieved the same effect.
+Note that the rank is the negative of the difference between the two images. The reason is that AI::Genetic tries to maximize the rank (score) of the fittest solution, so I needed a measure that increases for more fit solutions. Alternatively, I could have set the rank to 1/diff and achieved the same effect.
 
-I chose to iterate for a predefined number of generations. Another way would have been to keep on evolving until the rank of the best solution is within a given threshold. But, I really had no idea what that number would be.
+I chose to iterate for a predefined number of generations. Another way would have been to keep on evolving until the rank of the best solution is within a given threshold. But, I really have no idea what that number would be.
 
 ## Results
 
@@ -72,9 +72,14 @@ For the GA parameters, I used the following:
 * Mutation rate = 0.01
 * Number of generations = 5000
 
-To keep runtime short, I used a small image. The program took around 12 hours to go through the 5000 generations. The album below shows the reference image, along with images at generations 0, 1250, 2500, 3750 and 5000.
+To keep runtime short, I used a small image. The program took around 12 hours to go through the 5000 generations. Here are the reference image and the fittest solution:
 
-As you can see, since the algorithm started from completely random triangles, the best solution of generation 0 has absolutely no resemblance to the final image. By the 1250th generation, though, the main color regions are well-defined. The change from there to the 5000th generation is not as obvious but little details are getting better defined.
+![Fittest solution](http://imgur.com/L9Odx)
+
+The album below shows the reference image, along with images at generations 0, 1250, 2500, 3750 and 5000.
+
+As you can see, since the algorithm started from completely random triangles, the best solution of generation 0 has absolutely no resemblance to the final image.
+By the 1250th generation, though, the main color regions are well-defined. The change from there to the 5000th generation is not as obvious but little details are getting better defined.
 
 ## Code
 
