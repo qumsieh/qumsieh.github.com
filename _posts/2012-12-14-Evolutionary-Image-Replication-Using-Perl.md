@@ -6,8 +6,6 @@ category : blog
 tags : [perl, programming, Genetic Algorithms]
 ---
 
-# Evolutionary Image Replication using Perl
-
 A few days ago, someone on [HackerNews](http://news.ycombinator.com/item?id=4912964) linked to [Roger Alsing's "Evolution of Mona Lisa"](http://rogeralsing.com/2008/12/07/genetic-programming-evolution-of-mona-lisa/) post. In it, Roger describes how he wrote a program that painted a replica of the Mona Lisa using only 50 semi transparent polygons.
 
 I've always found evolutionary algorithms to be very intriguing. A few years ago, I wrote [AI::Genetic](http://search.cpan.org/~aqumsieh/AI-Genetic-0.05/) which is pure Perl implementation of Genetic Algorithms. Since I'm always looking for an excuse to play with it, I decided to write my own implementation of Roger's program. Although Roger [released his source code](http://rogeralsing.com/2008/12/11/genetic-programming-mona-lisa-source-code-and-binaries/), I did not look at it and proceeded to write everything from scratch. I was surprised at how easy it turned out to be.
@@ -68,16 +66,13 @@ I chose to iterate for a predefined number of generations. Another way would hav
 ## Results
 
 For the GA parameters, I used the following:
+
 * Population size = 100
 * Crossover rate = 0.91
 * Mutation rate = 0.01
 * Number of generations = 5000
 
-To keep runtime short, I used a small image. The program took around 12 hours to go through the 5000 generations. The album below shows the reference image, along with images at generations 0, 1250, 2500, 3750 and 5000:
-
-<div>
-<iframe class="imgur-album" width="100%" height="300" frameborder="0" src="http://imgur.com/a/AYCXF/embed" />
-</div>
+To keep runtime short, I used a small image. The program took around 12 hours to go through the 5000 generations. The album below shows the reference image, along with images at generations 0, 1250, 2500, 3750 and 5000.
 
 As you can see, since the algorithm started from completely random triangles, the best solution of generation 0 has absolutely no resemblance to the final image. By the 1250th generation, though, the main color regions are well-defined. The change from there to the 5000th generation is not as obvious but little details are getting better defined.
 
@@ -90,3 +85,8 @@ Coming soon to github.
 It was surprisingly easy to write the program, and it performed relatively well. Just like evolution in real life, GAs are really slow. 5000 generations was enough to get a general outline of the final image, but to get a more accurate result, we need to run it for a much longer time. I'm currently running the same algorithm for 25000 generations to see what happens.
 
 Also, the GA parameters that I chose were pretty much random. More thought (and trial & error!) should go into choosing them.
+Moreover, the alpha value of all trianlges was hard-coded at 50%. A simple extension would be to add this parameter to the genome.
+
+<div>
+<iframe class="imgur-album" width="100%" height="300" frameborder="0" src="http://imgur.com/a/AYCXF/embed" />
+</div>
